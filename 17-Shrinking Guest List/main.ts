@@ -31,7 +31,7 @@ let newGuest: string = "Irfan";
 guestList[guestList.indexOf(guest)] = newGuest;
 console.log(guestList);
 
-guestList.map((items) => console.log(`Dear ${items} ,I found a bigger dinner table so I am invited more peoples.`))
+guestList.map((items) => console.log(`Dear ${items} ,I found a bigger dinner table so I am invited more peoples.`));
 
 
 //Point 02 Began:
@@ -104,6 +104,6 @@ guestList.splice(4, 2);
 
 
 // Print your list to make sure you actually have an empty list at the end of your program
-console.log(`Final guest list : ${guestList}`)
+console.log(`Final guest list : ${guestList}`);
 
 
