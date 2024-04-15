@@ -6,25 +6,28 @@
 
 // // • Loop through the new_users list to see if each new username has already been used. If it has, print a message that the person will need to enter a new username. If a username has not been used, print a message saying that the username is available.
 
+// • Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted.
+
+
 
 
 let current_users: string[] = ["Mohsin", "Ali", "Asim", "Jawad", "Farhan"];
-let new_users: string[] = ["Asim", "Farhan", "Umer", "Asif", "Shoaib"];
+let new_users: string[] = ["Asim", "farhan", "umer", "Asif", "Shoaib"];
 
 for (let new_username of new_users) {
-    if (current_users.includes(new_username)) {
+    let usernameExists = false;
+    for (let existing_username of current_users) {
+        if (existing_username.toLowerCase() === new_username.toLowerCase()) {
+            usernameExists = true;
+            break;
+        }
+    }
+    if (usernameExists) {
         console.log(`Sorry, the username "${new_username}" is already taken. Please enter a new username.`);
     } else {
         console.log(`Congratulations! The username "${new_username}" is available.`);
     }
 };
-
-
-
-
-
-
-
 
 
 
