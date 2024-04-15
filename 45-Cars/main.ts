@@ -11,15 +11,15 @@ function store_car_info(manufacturer: string, model: string, ...details: { [key:
         model: model,
         details: {}
     };
-    
+
     // Store additional details :
-    
+
     for (let detail of details) {
         for (let key in detail) {
             car_info.details[key] = detail[key];
         }
     }
-    
+
     return car_info;
 }
 
